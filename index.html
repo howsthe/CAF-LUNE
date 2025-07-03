@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CAFÉ LUNE</title>
   <link rel="stylesheet" href="css/gpt.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
@@ -37,11 +39,30 @@
   </header>
   <div id="visual">
     <div class="img_box">
-      <ul class="left">
+      <!-- Swiper -->
+      <div class="swiper mySwiper left">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <a href="#"><img src="images/main1.png" alt=""><p>시간이 지나도 <br>잊히지 않는 한 모금</p></a>
+             <div class="text_box"><em>CAFÉ LUNE Signature Coffee</em></div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="images/main1.png" alt=""><p>시간이 지나도 <br>잊히지 않는 한 모금</p></a>
+           <div class="text_box"><em>CAFÉ LUNE Signature Coffee</em></div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- <ul class="left">
         <li><a href="#"><img src="images/main1.png" alt=""><p>시간이 지나도 <br>잊히지 않는 한 모금</p></a>
         </li>
         <div class="text_box"><em>CAFÉ LUNE Signature Coffee</em></div>
-      </ul>
+      </ul> -->
+
+
+
       <ul class="right">
         <li class="first"><a href="#"><img src="images/main2.png" alt=""><p>최고급 원두</p></a></li>
         <li class="second"><a href="#"><img src="images/main3.png" alt=""><p>Drip Coffee</p></a></li>
@@ -168,5 +189,23 @@ CAFÉ LUNE이 빚어낸 빙수의 기준, 지금 만나보세요.</div>
     </ul>
   </div>
 </div>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 </body>
 </html>
